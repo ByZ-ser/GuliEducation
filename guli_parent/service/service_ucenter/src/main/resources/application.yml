@@ -1,0 +1,22 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: service-ucenter
+  redis:
+    host: 192.168.136.135
+    database: 0
+    port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
+mybatis-plus:
+  mapper-locations: classpath:com/zhang/ucenterservice/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

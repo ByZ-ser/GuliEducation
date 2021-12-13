@@ -1,0 +1,21 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: service-oss
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#阿里云 OSS
+#不同的服务器，地址不同
+# OSS相关配置信息
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-beijing.aliyuncs.com #oss对外服务的访问域名
+      accessKeyId: LTAI5t6FFbG7xK44BMpnmrhW #访问身份验证中用到用户标识
+      accessKeySecret: 703wxTIApe2Bjf88rukjxMJw0iH4cc #用户用于加密签名字符串和oss用来验证签名字符串的密钥
+      bucketName: edu-0801 # oss的存储空间
